@@ -97,179 +97,187 @@
                 border: var(--out-bt-bor);
                 border-color: var(--out-bor-color);
             }
+            #submitter{
+                background-color: rgb(255, 201, 85);
+                margin-left: auto;
+                margin-right: 0px;
+            }
         </style>
         </head>
         <body>
-            <div class="container"><h2>Buttons Style Editor</h2></div>
-            <div class="container">
-                <div class="tab">
-                    <button class="tablinks positive" onclick="openTab(event, 'Type1')" id="defaultOpen">Type1</button>
-                    <button class="tablinks negative" onclick="openTab(event, 'Type2')">Type2</button>
-                    <button class="tablinks submit" onclick="openTab(event, 'Type3')">Type3</button>
-                    <button class="tablinks misc" onclick="openTab(event, 'Type4')">Type4</button>
-                    <button class="tablinks output" onclick="openTab(event, 'Type5')">Type5</button>
-                </div>
-                <div id="description" class="container">
-                    <h3>This is the section where you can customize the buttons the way you want.</h3>
-                    <h3>Just click on the tabs above and there you go!</h3>
-                </div>
-                <div id="Type1" class="tabcontent positive">
-                    <table class="table">
-                        <tr><td><h3>Description</h3></td></tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Add" class="btn cp-positive">
-                                <input type="submit" value="Edit" class="btn cp-positive">
-                                <input type="submit" value="Create" class="btn cp-positive">
-                                <input type="submit" value="Upload" class="btn cp-positive">
-                            </td>
-                        </tr>
-                        <tr><td><label>Choose button color : <input type="color" name="pos-bt" id="type1-bg"></label> <label>Choose text color : <input type="color" name="pos-txt" id="type1-text"></label></td></tr>
-                        <tr>
-                            <td>
-                                <label>Choose border type:
-                                    <select name="pos-bor" id="type1-bor">
-                                        <option value="none">None</option>
-                                        <option value="dotted">Dotted</option>
-                                        <option value="dashed">Dashed</option>
-                                        <option value="solid">Solid</option>
-                                        <option value="double">Double</option>
-                                        <option value="groove">Groove</option>
-                                        <option value="none">Ridge</option>
-                                        <option value="inset">Inset</option>
-                                        <option value="outset">Outset</option>
-                                    </select>
-                                </label>
-                                <label>Choose border color : <input type="color" name="pos-bor-col" id="type1-bor-col"></label>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="Type2" class="tabcontent negative">
-                    <table class="table">
-                        <tr><td><h3>Description</h3></td></tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Delete" class="btn cp-negative">
-                                <input type="submit" value="Cancel" class="btn cp-negative">
-                            </td>
-                        </tr>
-                        <tr><td><label>Choose button color : <input type="color" name="neg-bt" id="type2-bg"></label> <label>Choose text color : <input type="color" name="neg-txt" id="type2-text"></label></td></tr>
-                        <tr>
-                            <td>
-                                <label>Choose border type:
-                                    <select name="neg-bor" id="type2-bor">
-                                        <option value="none">None</option>
-                                        <option value="dotted">Dotted</option>
-                                        <option value="dashed">Dashed</option>
-                                        <option value="solid">Solid</option>
-                                        <option value="double">Double</option>
-                                        <option value="groove">Groove</option>
-                                        <option value="none">Ridge</option>
-                                        <option value="inset">Inset</option>
-                                        <option value="outset">Outset</option>
-                                    </select>
-                                </label>
-                                <label>Choose border color : <input type="color" name="neg-bor-col" id="type2-bor-col"></label>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="Type3" class="tabcontent submit">
-                    <table class="table">
-                        <tr><td><h3>Description</h3></td></tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Search" class="btn cp-submit">
-                                <input type="submit" value="Save" class="btn cp-submit">
-                            </td>
-                        </tr>
-                        <tr><td><label>Choose button color : <input type="color" name="sub-bt" id="type3-bg"></label> <label>Choose text color : <input type="color" name="sub-txt" id="type3-text"></label></td></tr>
-                        <tr>
-                            <td>
-                                <label>Choose border type:
-                                    <select name="sub-bor" id="type3-bor">
-                                        <option value="none">None</option>
-                                        <option value="dotted">Dotted</option>
-                                        <option value="dashed">Dashed</option>
-                                        <option value="solid">Solid</option>
-                                        <option value="double">Double</option>
-                                        <option value="groove">Groove</option>
-                                        <option value="none">Ridge</option>
-                                        <option value="inset">Inset</option>
-                                        <option value="outset">Outset</option>
-                                    </select>
-                                </label>
-                                <label>Choose border color : <input type="color" name="sub-bor-col" id="type3-bor-col"></label>
-                            </td>
-                        </tr>
-                    </table>                   
-                </div>
-                <div id="Type4" class="tabcontent misc">
-                    <table class="table">
-                        <tr><td><h3>Description</h3></td></tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Manage Translations" class="btn cp-misc">
-                                <input type="submit" value="Info" class="btn cp-misc">
-                                <input type="submit" value="Next" class="btn cp-misc">
-                                <input type="submit" value="Previous" class="btn cp-misc">
-                            </td>
-                        </tr>
-                        <tr><td><label>Choose button color : <input type="color" name="misc-bt" id="type4-bg"></label> <label>Choose text color : <input type="color" name="misc-txt" id="type4-text"></label></td></tr>
-                        <tr>
-                            <td>
-                                <label>Choose border type:
-                                    <select name="misc-bor" id="type4-bor">
-                                        <option value="none">None</option>
-                                        <option value="dotted">Dotted</option>
-                                        <option value="dashed">Dashed</option>
-                                        <option value="solid">Solid</option>
-                                        <option value="double">Double</option>
-                                        <option value="groove">Groove</option>
-                                        <option value="none">Ridge</option>
-                                        <option value="inset">Inset</option>
-                                        <option value="outset">Outset</option>
-                                    </select>
-                                </label>
-                                <label>Choose border color : <input type="color" name="misc-bor-col" id="type4-bor-col"></label>
-                            </td>
-                        </tr>
-                    </table>                  
-                </div>
-                <div id="Type5" class="tabcontent output">
-                    <table class="table">
-                        <tr><td><h3>Description</h3></td></tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="Print" class="btn cp-output">
-                                <input type="submit" value="Download" class="btn cp-output">
-                                <input type="submit" value="Export" class="btn cp-output">
-                                <input type="submit" value="Generate" class="btn cp-output">
-                            </td>
-                        </tr>
-                        <tr><td><label>Choose button color : <input type="color" name="out-bt" id="type5-bg"></label> <label>Choose text color : <input type="color" name="out-txt" id="type5-text"></label></td></tr>
-                        <tr>
-                            <td>
-                                <label>Choose border type:
-                                    <select name="out-bor" id="type5-bor">
-                                        <option value="none">None</option>
-                                        <option value="dotted">Dotted</option>
-                                        <option value="dashed">Dashed</option>
-                                        <option value="solid">Solid</option>
-                                        <option value="double">Double</option>
-                                        <option value="groove">Groove</option>
-                                        <option value="none">Ridge</option>
-                                        <option value="inset">Inset</option>
-                                        <option value="outset">Outset</option>
-                                    </select>
-                                </label>
-                                <label>Choose border color : <input type="color" name="out-bor-col" id="type5-bor-col"></label>
-                            </td>
-                        </tr>
-                    </table>                
-                </div>
-            </div>
+            <form method="post" action="#">
+                    <div class="container"><h2>Buttons Style Editor</h2></div>
+                    <div class="container">
+                        <div class="tab">
+                            <button class="tablinks positive" onclick="openTab(event, 'Type1')">Type1</button>
+                            <button class="tablinks negative" onclick="openTab(event, 'Type2')">Type2</button>
+                            <button class="tablinks submit" onclick="openTab(event, 'Type3')">Type3</button>
+                            <button class="tablinks misc" onclick="openTab(event, 'Type4')">Type4</button>
+                            <button class="tablinks output" onclick="openTab(event, 'Type5')">Type5</button>
+                        </div>
+                        <div id="description" class="container">
+                            <h3>This is the section where you can customize the buttons the way you want.</h3>
+                            <h3>Just click on the tabs above and there you go!</h3>
+                        </div>
+                        <div id="Type1" class="tabcontent positive">
+                            <table class="table">
+                                <tr><td><h3>Description</h3></td></tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Add" class="btn cp-positive">
+                                        <input type="submit" value="Edit" class="btn cp-positive">
+                                        <input type="submit" value="Create" class="btn cp-positive">
+                                        <input type="submit" value="Upload" class="btn cp-positive">
+                                    </td>
+                                </tr>
+                                <tr><td><label>Choose button color : <input type="color" name="pos-bt" id="type1-bg"></label> <label>Choose text color : <input type="color" name="pos-txt" id="type1-text"></label></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>Choose border type:
+                                            <select name="pos-bor" id="type1-bor">
+                                                <option value="none">None</option>
+                                                <option value="dotted">Dotted</option>
+                                                <option value="dashed">Dashed</option>
+                                                <option value="solid">Solid</option>
+                                                <option value="double">Double</option>
+                                                <option value="groove">Groove</option>
+                                                <option value="none">Ridge</option>
+                                                <option value="inset">Inset</option>
+                                                <option value="outset">Outset</option>
+                                            </select>
+                                        </label>
+                                        <label>Choose border color : <input type="color" name="pos-bor-col" id="type1-bor-col"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="Type2" class="tabcontent negative">
+                            <table class="table">
+                                <tr><td><h3>Description</h3></td></tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Delete" class="btn cp-negative">
+                                        <input type="submit" value="Cancel" class="btn cp-negative">
+                                    </td>
+                                </tr>
+                                <tr><td><label>Choose button color : <input type="color" name="neg-bt" id="type2-bg"></label> <label>Choose text color : <input type="color" name="neg-txt" id="type2-text"></label></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>Choose border type:
+                                            <select name="neg-bor" id="type2-bor">
+                                                <option value="none">None</option>
+                                                <option value="dotted">Dotted</option>
+                                                <option value="dashed">Dashed</option>
+                                                <option value="solid">Solid</option>
+                                                <option value="double">Double</option>
+                                                <option value="groove">Groove</option>
+                                                <option value="none">Ridge</option>
+                                                <option value="inset">Inset</option>
+                                                <option value="outset">Outset</option>
+                                            </select>
+                                        </label>
+                                        <label>Choose border color : <input type="color" name="neg-bor-col" id="type2-bor-col"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="Type3" class="tabcontent submit">
+                            <table class="table">
+                                <tr><td><h3>Description</h3></td></tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Search" class="btn cp-submit">
+                                        <input type="submit" value="Save" class="btn cp-submit">
+                                    </td>
+                                </tr>
+                                <tr><td><label>Choose button color : <input type="color" name="sub-bt" id="type3-bg"></label> <label>Choose text color : <input type="color" name="sub-txt" id="type3-text"></label></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>Choose border type:
+                                            <select name="sub-bor" id="type3-bor">
+                                                <option value="none">None</option>
+                                                <option value="dotted">Dotted</option>
+                                                <option value="dashed">Dashed</option>
+                                                <option value=" id="submitter"solid">Solid</option>
+                                                <option value="double">Double</option>
+                                                <option value="groove">Groove</option>
+                                                <option value="none">Ridge</option>
+                                                <option value="inset">Inset</option>
+                                                <option value="outset">Outset</option>
+                                            </select>
+                                        </label>
+                                        <label>Choose border color : <input type="color" name="sub-bor-col" id="type3-bor-col"></label>
+                                    </td>
+                                </tr>
+                            </table>                   
+                        </div>
+                        <div id="Type4" class="tabcontent misc">
+                            <table class="table">
+                                <tr><td><h3>Description</h3></td></tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Manage Translations" class="btn cp-misc">
+                                        <input type="submit" value="Info" class="btn cp-misc">
+                                        <input type="submit" value="Next" class="btn cp-misc">
+                                        <input type="submit" value="Previous" class="btn cp-misc">
+                                    </td>
+                                </tr>
+                                <tr><td><label>Choose button color : <input type="color" name="misc-bt" id="type4-bg"></label> <label>Choose text color : <input type="color" name="misc-txt" id="type4-text"></label></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>Choose border type:
+                                            <select name="misc-bor" id="type4-bor">
+                                                <option value="none">None</option>
+                                                <option value="dotted">Dotted</option>
+                                                <option value="dashed">Dashed</option>
+                                                <option value="solid">Solid</option>
+                                                <option value="double">Double</option>
+                                                <option value="groove">Groove</option>
+                                                <option value="none">Ridge</option>
+                                                <option value="inset">Inset</option>
+                                                <option value="outset">Outset</option>
+                                            </select>
+                                        </label>
+                                        <label>Choose border color : <input type="color" name="misc-bor-col" id="type4-bor-col"></label>
+                                    </td>
+                                </tr>
+                            </table>                  
+                        </div>
+                        <div id="Type5" class="tabcontent output">
+                            <table class="table">
+                                <tr><td><h3>Description</h3></td></tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Print" class="btn cp-output">
+                                        <input type="submit" value="Download" class="btn cp-output">
+                                        <input type="submit" value="Export" class="btn cp-output">
+                                        <input type="submit" value="Generate" class="btn cp-output">
+                                    </td>
+                                </tr>
+                                <tr><td><label>Choose button color : <input type="color" name="out-bt" id="type5-bg"></label> <label>Choose text color : <input type="color" name="out-txt" id="type5-text"></label></td></tr>
+                                <tr>
+                                    <td>
+                                        <label>Choose border type:
+                                            <select name="out-bor" id="type5-bor">
+                                                <option value="none">None</option>
+                                                <option value="dotted">Dotted</option>
+                                                <option value="dashed">Dashed</option>
+                                                <option value="solid">Solid</option>
+                                                <option value="double">Double</option>
+                                                <option value="groove">Groove</option>
+                                                <option value="none">Ridge</option>
+                                                <option value="inset">Inset</option>
+                                                <option value="outset">Outset</option>
+                                            </select>
+                                        </label>
+                                        <label>Choose border color : <input type="color" name="out-bor-col" id="type5-bor-col"></label>
+                                    </td>
+                                </tr>
+                            </table>                
+                        </div>
+                    </div>
+                    <div class="container"><br><br><input type="submit" class="btn" id="submitter" value="Submit Changes"></div>
+            </form>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script>
@@ -345,13 +353,13 @@
                     $('.cp-misc').each(function() {
                         this.style.setProperty('--misc-txt-color', $('#type4-text').val());
                     })
-                });
+                }); 
                 $('#type4-bor').on('change', function() {
                     $('.cp-misc').each(function() {
                         this.style.setProperty('--misc-bt-bor', $('#type4-bor').val());
                     })
                 });
-                $('#type4-bor-col').on('change', function() {
+                $('#type4-bor-col ').on('change', function() {
                     $('.cp-misc').each(function() {
                         this.style.setProperty('--misc-bor-color', $('#type4-bor-col').val());
                     })
@@ -381,8 +389,9 @@
                     $('#description').remove();
                 })
 
-                function openTab(evt, buttonType) {
+            function openTab(evt, buttonType) {
                 var i, tabcontent, tablinks;
+                evt.preventDefault();
                 tabcontent = document.getElementsByClassName("tabcontent");
                 for (i = 0; i < tabcontent.length; i++) {
                     tabcontent[i].style.display = "none";
@@ -393,6 +402,21 @@
                 }
                 document.getElementById(buttonType).style.display = "block";
             }
+                $('.cp-positive').on('click', function(evt) {
+                    evt.preventDefault();
+                });
+                $('.cp-negative').on('click', function(evt) {
+                    evt.preventDefault();
+                });
+                $('.cp-submit').on('click', function(evt) {
+                    evt.preventDefault();
+                });
+                $('.cp-misc').on('click', function(evt) {
+                    evt.preventDefault();
+                });
+                $('.cp-output').on('click', function(evt) {
+                    evt.preventDefault();
+                });
         </script>
     </body>
 </html>
