@@ -100,7 +100,7 @@
         </style>
         </head>
         <body>
-            <div class="container"><h2>Elements Editor Prototype</h2></div>
+            <div class="container"><h2>Buttons Style Editor</h2></div>
             <div class="container">
                 <div class="tab">
                     <button class="tablinks positive" onclick="openTab(event, 'Type1')" id="defaultOpen">Type1</button>
@@ -108,6 +108,10 @@
                     <button class="tablinks submit" onclick="openTab(event, 'Type3')">Type3</button>
                     <button class="tablinks misc" onclick="openTab(event, 'Type4')">Type4</button>
                     <button class="tablinks output" onclick="openTab(event, 'Type5')">Type5</button>
+                </div>
+                <div id="description" class="container">
+                    <h3>This is the section where you can customize the buttons the way you want.</h3>
+                    <h3>Just click on the tabs above and there you go!</h3>
                 </div>
                 <div id="Type1" class="tabcontent positive">
                     <table class="table">
@@ -373,6 +377,9 @@
                         this.style.setProperty('--out-bor-color', $('#type5-bor-col').val());
                     })
                 });
+                $('.tablinks').on('click', function() {
+                    $('#description').remove();
+                })
 
                 function openTab(evt, buttonType) {
                 var i, tabcontent, tablinks;
